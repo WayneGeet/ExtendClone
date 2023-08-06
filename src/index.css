@@ -15,6 +15,7 @@
 .container{
   max-width:1080px;
   margin-inline:auto;
+  padding-inline:2rem;
 }
 
 img{
@@ -23,6 +24,8 @@ img{
 
 body {
   background-color:white;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
 }
 
 .blurry{
@@ -39,8 +42,7 @@ body {
 }
 
 .threed{
-  transform:perspective(1000px) translateZ(-100%);
-  transform:scale(90%)
+  transform:scale(80%)
 }
 
 .wrapper{
@@ -67,12 +69,11 @@ body {
 }
 
 .grid_auto{
-  display:grid;
   grid-template-columns:repeat(auto-fit, minmax(18rem, 1fr))
 }
 .grid_auto_features{
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr))
+  grid-template-columns:repeat(auto-fit, minmax(22.5rem, 1fr))
 }
 
 .true{
@@ -81,12 +82,12 @@ body {
 
 .true:before{
   content:'true';
-  border:1px solid rgba(168, 168, 168, 0.5);
+  border:1px solid rgba(168, 168, 168, 0.2);
   border-radius:0.25rem;
   padding:2px 5px;
   position:absolute;
-  top:50%;
-  left:-30%;
+  top:49%;
+  left:-25%;
   color:#080808;
   font-size:0.7rem;
   transform:translateY(-50%);
@@ -100,12 +101,12 @@ body {
 
 .false:before{
   content:'false';
-  border:1px solid rgba(168, 168, 168, 0.5);
+  border:1px solid rgba(168, 168, 168, 0.2);
   border-radius:0.25rem;
   padding:2px 5px;
   position:absolute;
-  top:50%;
-  left:-30%;
+  top:49%;
+  left:-25%;
   color:#080808;
   font-size:0.7rem;
   transform:translateY(-50%);
@@ -118,7 +119,8 @@ body {
   inset:0;
   position:absolute;
   opacity:0.2;
-  transform:scale(90%);
+  transform-origin: top;
+  transform:scaleY(75%);
   background:url("./components/logos/dotted.jpg");
   background-size: cover;
   background-repeat:repeat;
@@ -145,7 +147,39 @@ body {
   top:0;
   bottom:0;
   left:0;
-  width:10rem;
+  width:5rem;
   position:absolute;
-  background:linear-gradient(to left, rgba(243, 244, 246, 1), rgb(255, 255, 255))
+  background:linear-gradient(to left, rgba(255, 255, 255), white);
+  box-shadow:1rem 0 2rem rgb(255, 255, 255)
+}
+
+.dot{position:relative};
+.dot::absolute{
+  content:"";
+  top:50%;
+  left:50%;
+  width:5px;
+  height:5px;
+  background-color: rgb(236, 0, 0);
+  border-radius:50%;
+  position:absolute;
+  z-index: 20;
+  transform:translateY(0)
+}
+
+.persp{
+  perspective: 500px;
+  transform-style:preserve-3d;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .dotted::before{
+    transform:scale(50%);
+    /* transform:translateY(-50%) */
+  }
+
+  .grid_auto{
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+  }
 }

@@ -4,9 +4,9 @@ import signb from "./logos/sign_black.png";
 
 const Loop = () => {
   return (
-    <div className="border border-gray-300 rounded-md shadow-sm shadow-gray-300 relative overflow-hidden py-10 px-5">
-        <div className="grid grid-cols-3 grid-rows-4 grid-flow-col border border-gray-300 rounded-md w-fit 
-        relative -right-20  overflow-hidden shadow-sm shadow-gray-400 h_loop mb-16">
+    <div className="border border-gray-300 rounded-md relative overflow-hidden lg:mx-auto lg:pb-10 ">
+        <div className="grid grid-cols-3 grid-rows-4 grid-flow-col border-b border-l border-t border-gray-300 rounded-md w-fit 
+        relative -right-20  overflow-hidden  h_loop mb-16 md:left-0 md:right-0">
             <div className="flex flex-col justify-start items-start px-2 gap-[2px] py-3">
                 <p className="text-[0.8rem]">Hari Ambarasu</p>
                 <small className="text-gray-500 text-[0.7rem]">hari@extend.app</small>
@@ -30,7 +30,7 @@ const Loop = () => {
                 <div className="relative top-5">
                     <p>Eli Badgio Eli@extend.app</p>
                 </div>
-                <div className="flex items-center justify-start gap-2 ">
+                <div className="flex flex-col md:flex-row items-center justify-start gap-2 ">
                     <div className="flex flex-col gap-[2px] justify-start relative top-10 ">
                         <small className="text=[0.5rem]">submitted<span className="text-red-500 text-[0.6rem]">62% match</span></small>
                         <div className="bg-gray-100 px-7 py-2 w-40 border border-gray-200 rounded-sm">
@@ -45,7 +45,11 @@ const Loop = () => {
                     </div>
                 </div>
 
-                <div className="col-span-3"></div>
+                <div className="col-span-3 bg-white lg:-mt-5 mr-4 items-end">
+                    {/* <div className="bg-black rounded-lg px-4 py-[4px] text-white w-fit">Accept</div>
+                    <div className="bg-gray-300 rounded-lg px-3 py-[3px] text-white w-fit">Deny</div> */}
+
+                </div>
                 
             </div>
         </div>

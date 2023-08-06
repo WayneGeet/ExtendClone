@@ -10,7 +10,7 @@ import character from "./logos/character.png"
 const Infinite = () => {
   return (
     <section className="bg-gray-100 py-16 ">
-      <div className="container flex items-center gap-16 justify-between">
+      <div className="container flex lg:items-center gap-16 justify-between lg:flex-row flex-col items-start overflow-hidden">
         <div className=" ">
           <h3 className="text-medium text-gray-500 ">
             Backed by world-class investors and advisors

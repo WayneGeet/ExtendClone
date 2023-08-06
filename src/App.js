@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
+import Home from "./pages/Home";
 import Doc from "./components/Doc"
 import Hire from './components/Hire';
 import Features from "./components/Features";
@@ -8,9 +8,9 @@ import Enterprise from "./components/Enterprise";
 
 function App() {
   return (
-    <div className="">
+    <div className="md:container">
       <Navbar/>
-      <Hero/>
+      <Home/>
       <Doc/>
       <Infinite/>
       <Hire/>

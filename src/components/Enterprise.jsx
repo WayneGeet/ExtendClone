@@ -14,11 +14,11 @@ const Enterprise = () => {
                 <div className="pb-14 text-center">
                     <h2 className="text-2xl font-normal ">Enterprise Ready</h2>
                 </div>
-                <div className="grid_auto gap-4 px-10">
+                <div className="lg:grid_auto grid w-full gap-5 grid-cols-1 items-center justify-center lg:gap-4 lg:px-10 ">
                     {items.map(({title, content}, i) => {
                         return(
-                            <div key={i} className="px-3 py-3 border border-gray-300 rounded-lg
-                            shadow-sm shadow-gray-200 border-opacity-60">
+                            <div key={i} className="mx-auto w-1/2 lg:w-full px-5 py-3 rounded-lg
+                            shadow-md shadow-gray-300">
                                 <h5 className="text-[#222] text-[0.8rem] font-semibold pb-2">{title}</h5>
                                 <p className="text-[#222] text-[0.8rem]">{content}</p>
                             </div>
